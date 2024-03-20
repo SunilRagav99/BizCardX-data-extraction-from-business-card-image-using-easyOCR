@@ -15,9 +15,10 @@ st.set_page_config(page_title="BizcardX:Extracting Business card Data with easyO
                    initial_sidebar_state="expanded",
 )
 st.markdown("<h1 style='text-align: center; color: white;'>BizCardX: Extracting Business Card Data with easyOCR</h1>", unsafe_allow_html=True)
-
+st.sidebar.header(":wave: :green[**Hello! Welcome to the dashboard**]")
 #creating options
-selected = option_menu(None, ["Home","Upload & Extract","Modify"], 
+with st.sidebar:
+    selected = option_menu(None, ["Home","Upload & Extract","Modify"], 
                        icons=["house","cloud-upload","pencil-square"],
                        default_index=0,
                        orientation="horizontal",
